@@ -713,7 +713,7 @@ class GMM_gt(object):
         #Deprecated in sklearn 0.14, removed in 0.16
         #self.l_probs, self.posterior_probs = gmm.eval(self.shaped_mus)
         
-        self.l_probs, self.posterior_probs = gmm.score_samples(self.shaped_mus), gmm.predict_proba(self.shaped_mus)
+        self.l_probs self.posterior_probs = gmm.score_samples(self.shaped_mus), gmm.predict_proba(self.shaped_mus)
 
         
         #unique labels are the unique labels and uniq mus are the 
