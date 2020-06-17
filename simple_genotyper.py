@@ -397,7 +397,7 @@ class simple_genotyper(object):
         n_components = len(init_means)
         #gmm = mixture.GMM(n_components, 'spherical')
         #gmm = mixture.GMM(n_components, 'diag')
-        gmm = mixture.GMM(n_components, 'spherical', min_covar=min_covar,n_iter=n_iter, init_params='')
+        gmm = mixture.GaussianMixture(n_components, 'spherical', tol=min_covar, max_iter=n_iter)
         gmm.means = np.reshape(np.array(init_means),(len(init_means),1))
         gmm.weights = np.array(init_weights)
         
@@ -449,7 +449,7 @@ class simple_GMM_gt(object):
         #Deprecated in sklearn 0.14, removed in 0.16
         #self.l_probs, self.posterior_probs = gmm.eval(self.shaped_mus)
         
-        self.l_probs, self.posterior_probs = gmm.score_samples(self.shaped_mus)
+        self.l_probs self.posterior_probs = gmm.score_samples(self.shaped_mus), gmm.predict_proba(self.shaped_mus)
         
         #unique labels are the unique labels and uniq mus are the 
         #mean of the self.mus for each label
