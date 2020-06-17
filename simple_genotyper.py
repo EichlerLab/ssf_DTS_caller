@@ -13,8 +13,6 @@ from sklearn import cluster
 from sklearn import metrics
 from sklearn import mixture
 
-from sets import Set
-
 import math
 import random
 from scipy.stats import norm
@@ -23,7 +21,6 @@ from scipy.stats import fisher_exact
 import scipy.spatial.distance as dist
 import scipy.cluster.hierarchy as hclust
 
-from sets import Set
 from scipy.stats.mstats import mode
 
 def overlap(s1, e1, s2, e2):
