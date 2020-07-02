@@ -1778,8 +1778,8 @@ class genotyper(object):
         
         labels = gmm.predict(X)
         
-        bic = -2*gmm.score(X).sum() + (3*n_components)*np.log(X.shape[0])
-        aic = -2*gmm.score(X).sum() + 2*(3*n_components)
+        bic = -2*gmm.score_samples(X).sum() + (3*n_components)*np.log(X.shape[0])
+        aic = -2*gmm.score_samples(X).sum() + 2*(3*n_components)
         
         #print np.unique(labels)
         #for i,l in enumerate(list(np.unique(labels))):
