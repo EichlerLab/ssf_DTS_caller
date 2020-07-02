@@ -397,7 +397,7 @@ class simple_genotyper(object):
         n_components = len(init_means)
         #gmm = mixture.GMM(n_components, 'spherical')
         #gmm = mixture.GMM(n_components, 'diag')
-        gmm = mixture.GaussianMixture(n_components, 'spherical', tol=min_covar, max_iter=n_iter)
+        gmm = mixture.GaussianMixture(n_components, 'spherical', reg_covar=min_covar, max_iter=n_iter)
         gmm.means = np.reshape(np.array(init_means),(len(init_means),1))
         gmm.weights = np.array(init_weights)
         
