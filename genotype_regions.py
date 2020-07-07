@@ -134,7 +134,7 @@ if __name__ == "__main__":
     parser.add_argument("--dts_list_file", help="list of paths to DTS files to genotype")
     parser.add_argument("regions_file", help="BED file of regions to genotype")
     parser.add_argument("genotypes_file", help="output file for genotypes")
-    parser.add_argument("--contigs", default="/net/eichler/vol4/home/jlhudd/projects/DTS_caller/500_bp_windows.pkl.contigs")
+    parser.add_argument("--contigs", help="pkl contig file")
     parser.add_argument("--window", type=int, default=500)
     parser.add_argument("--sunk", action='store_true')
     args = parser.parse_args()
