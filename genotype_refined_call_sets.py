@@ -42,9 +42,9 @@ if __name__=='__main__':
     opts.add_option('','--subset',dest='subset',type=int,default=0)
     opts.add_option('','--subset_indivs',dest='subset_indivs', default=None)
     
-    opts.add_option('','--genome_fa',dest='fn_fa', default="/net/eichler/vol7/home/psudmant/genomes/fastas/hg19_1kg_phase2_reference/human_g1k_v37.fasta")
-    opts.add_option('','--GC_DTS',dest='fn_GC_DTS', default="/net/eichler/vol7/home/psudmant/genomes/GC_tracks/windowed_DTS/HG19/500_bp_slide_GC")
-    opts.add_option('','--DTS_contigs',dest='fn_DTS_contigs', default="/net/eichler/vol7/home/psudmant/EEE_Lab/1000G/1000genomesScripts/windowed_analysis/DTS_window_analysis/windows/hg19_slide/500_bp_windows.pkl.contigs")
+    opts.add_option('','--genome_fa',dest='fn_fa')
+    opts.add_option('','--GC_DTS',dest='fn_GC_DTS')
+    opts.add_option('','--DTS_contigs',dest='fn_DTS_contigs')
     opts.add_option('','--do_plot',dest='do_plot',action="store_true",default=False)
     
     opts.add_option('','--simplify_complex_eval',
