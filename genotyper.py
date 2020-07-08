@@ -1430,7 +1430,7 @@ class genotyper(object):
         V_outstr = "{CHROM}\t{POS}\t{ID}\t{REF}\t{ALT}\t{QUAL}\t{FILTER}\t{INFO}\t{FORMAT}"
         ALTS = ",".join(["<CN%d>"%c for c in hap_cns if c!=1])
 
-        VCF_contig = contig.replace("chr","")
+        VCF_contig = contig
 
         if ALTS=="<CN2>":
             SVTYPE="DUP"
@@ -1446,7 +1446,7 @@ class genotyper(object):
         V_outstr = V_outstr.format(CHROM=VCF_contig,
                                    POS=s+1,
                                    ID="%s_%d_%d"%(contig, s+1, e),
-                                   REF=self.fasta.fetch(contig.replace("chr", ""), s, s+1),
+                                   REF=self.fasta.fetch(contig, s, s+1),
                                    ALT=ALTS,
                                    QUAL='.',
                                    INFO=INFO,
